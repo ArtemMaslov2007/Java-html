@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Проверка ввода</title>
+</head>
+<body>
+
+<input type="text" id="myInput" placeholder="Введите значение">
+<button id="myButton">Проверить</button>
+<p id="output"></p> 
+
+<script>
+  function checkInput() {
+  let inputValue = document.getElementById("myInput").value.trim();
+  if (inputValue === "") {
+    
+  document.getElementById("output").innerHTML = "Пожалуйста, введите значение!";
+  } else {
+     document.getElementById("output").innerHTML = "Вы ввели: " + inputValue;
+  }
+}
+
+document.getElementById("myButton").addEventListener("click", checkInput);
+
+</script>
+
+</body>
+</html>
